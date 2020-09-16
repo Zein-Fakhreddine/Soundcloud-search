@@ -138,13 +138,13 @@ public class Search {
 		long beforeTime = System.currentTimeMillis();
 		
 		JSONObject obj;
-		ArrayList<String> tracks = getTracks("7c89e606e88c94ff47bfd84357e5e9f4", "zedd", 10);
+		ArrayList<String> tracks = getTracks("", "zedd", 10);
 		System.out.println(tracks.size());
 		for(String track : tracks){
 			obj = new JSONObject(track);
 			System.out.println(obj.getString("stream_url"));
 			if(obj.getBoolean("streamable")){
-				System.out.println(getStreamURL("7c89e606e88c94ff47bfd84357e5e9f4", obj.getInt("id")));
+				System.out.println(getStreamURL("", obj.getInt("id")));
 			}
 
 		}
